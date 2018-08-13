@@ -1,0 +1,39 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
+    <!-- Text styles -->
+    <style name="Title">
+        <item name="android:textSize">@dimen/font_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/title_text_color</item>
+    </style>
+
+    <style name="ToolbarAction" parent="Base.TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/text_color_light</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+    </style>
+
+    <style name="DetailsTitle" parent="Base.TextAppearance.AppCompat.Title">
+        <item name="android:textSize">@dimen/font_normal</item>
+    </style>
+
+    <style name="DetailsBold" parent="Base.TextAppearance.AppCompat.Body1">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DetailsBold.Large" parent="Base.TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

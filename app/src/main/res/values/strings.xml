@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">DroidMotion</string>
+    <string name="title_main">My income</string>
+    <string name="detail_caption_status">Status</string>
+    <string name="detail_caption_date">Date</string>
+    <string name="detail_caption_amount">Amount</string>
+    <string name="action_back">Back</string>
+
+</resources>

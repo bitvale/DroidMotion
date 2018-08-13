@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation"
+    app:contentPadding="@dimen/padding_normal">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_card"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/img_twitter" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintBottom_toBottomOf="@+id/img_card"
+            app:layout_constraintStart_toEndOf="@+id/img_card"
+            app:layout_constraintTop_toTopOf="@+id/img_card"
+            tools:text="Twitter" />
+
+        <TextView
+            android:id="@+id/tv_title_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/detail_caption_amount"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:layout_constraintStart_toStartOf="@+id/img_card"
+            app:layout_constraintTop_toBottomOf="@+id/img_card" />
+
+        <TextView
+            android:id="@+id/tv_title_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_caption_date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title_amount"
+            app:layout_constraintStart_toStartOf="@+id/guideline_0"
+            app:layout_constraintTop_toTopOf="@+id/tv_title_amount" />
+
+        <TextView
+            android:id="@+id/tv_title_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_caption_status"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title_date"
+            app:layout_constraintStart_toStartOf="@+id/guideline_1"
+            app:layout_constraintTop_toTopOf="@+id/tv_title_date" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_tiny"
+            android:textAppearance="@style/DetailsBold.Large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_title_amount"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_amount"
+            tools:text="11,550.00" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_amount"
+            app:layout_constraintStart_toStartOf="@+id/tv_title_date"
+            tools:text="27.08.2018" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_date"
+            app:layout_constraintStart_toStartOf="@+id/tv_title_status"
+            tools:text="Correct" />
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="@dimen/toolbar_icon_size"
+            android:layout_height="@dimen/toolbar_icon_size"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_correct" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

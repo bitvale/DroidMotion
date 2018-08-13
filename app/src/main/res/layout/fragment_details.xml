@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_toolbar_container_height"
+        app:cardBackgroundColor="@color/toolbar_background"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:translationY="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="top"
+            android:alpha="0"
+            tools:alpha="1"
+            tools:layout_marginTop="@dimen/margin_normal">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/toolbar_icon_size"
+                android:layout_height="@dimen/toolbar_icon_size"
+                android:layout_marginStart="@dimen/margin_small"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_left" />
+
+            <TextView
+                android:id="@+id/tv_action_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/action_back"
+                android:textAppearance="@style/ToolbarAction"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_export"
+                android:layout_width="@dimen/toolbar_icon_size"
+                android:layout_height="@dimen/toolbar_icon_size"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_export" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <include
+        android:id="@+id/details_card"
+        layout="@layout/item_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_normal"
+        android:layout_marginEnd="@dimen/space_normal"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_marginTop="80dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:layoutAnimation="@anim/layout_animation_fall_down"
+        android:overScrollMode="never"
+        android:paddingStart="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_small"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_card"
+        tools:itemCount="14"
+        tools:listitem="@layout/item_details" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_negative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:clickable="true"
+        android:focusable="true"
+        android:translationY="@dimen/fab_translateY"
+        app:backgroundTint="@color/color_negative"
+        app:elevation="@dimen/fab_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:srcCompat="@drawable/ic_negative"
+        tools:translationY="0dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_positive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:clickable="true"
+        android:focusable="true"
+        android:translationY="@dimen/fab_translateY"
+        app:backgroundTint="@color/color_positive"
+        app:elevation="@dimen/fab_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:srcCompat="@drawable/ic_positive"
+        tools:translationY="0dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</android.support.constraint.ConstraintLayout>

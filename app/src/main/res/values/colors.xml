@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3aa3f7</color>
+    <color name="colorPrimaryDark">#025497</color>
+    <color name="colorAccent">#008dff</color>
+
+    <color name="color_negative">#ff4d6a</color>
+    <color name="color_positive">@color/colorAccent</color>
+
+    <color name="toolbar_background">@color/colorAccent</color>
+
+    <color name="color_disabled">#505a595b</color>
+
+    <color name="title_text_color">#4d4d4d</color>
+    <color name="text_color_light">#eee</color>
+    <color name="window_background">@android:color/white</color>
+</resources>

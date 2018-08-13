@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="400"
+    android:interpolator="@android:interpolator/overshoot"
+    android:transitionOrdering="together"
+    android:startDelay="0">
+    <changeClipBounds/>
+    <changeTransform/>
+    <changeBounds/>
+</transitionSet>

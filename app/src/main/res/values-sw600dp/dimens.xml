@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--For tab like Nexus 7-->
+    <dimen name="details_toolbar_container_height">164dp</dimen>
+</resources>

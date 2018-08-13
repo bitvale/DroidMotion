@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--For tab like Nexus 9 ~ w = 768dp-->
+    <dimen name="space_tiny">8dp</dimen>
+    <dimen name="space_small">12dp</dimen>
+    <dimen name="space_normal">20dp</dimen>
+    <dimen name="space_large">36dp</dimen>
+    <dimen name="space_xlarge">52dp</dimen>
+    <dimen name="space_huge">68dp</dimen>
+
+    <dimen name="font_title">28sp</dimen>
+    <dimen name="font_larger">24sp</dimen>
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_normal">18sp</dimen>
+    <dimen name="font_medium">16sp</dimen>
+    <dimen name="font_small">14sp</dimen>
+    <dimen name="icon_size">76dp</dimen>
+
+    <dimen name="details_toolbar_container_height">196dp</dimen>
+</resources>

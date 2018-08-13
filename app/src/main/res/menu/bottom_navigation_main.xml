@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_gift"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_gift"
+        android:title="Gift"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_wallet"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_wallet"
+        android:title="Gift"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_main"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_main"
+        android:title="Gift"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_dialog"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_dialog"
+        android:title="Gift"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_account"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_account"
+        android:title="Gift"
+        app:showAsAction="ifRoom" />
+</menu>

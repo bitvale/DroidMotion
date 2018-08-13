@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/tv_details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:textAppearance="@style/DetailsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Twitter" />
+
+    <TextView
+        android:id="@+id/tv_details_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_details_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_details_title"
+        tools:text="$11,550.00 X1 (including VAT 10%)" />
+
+    <TextView
+        android:id="@+id/tv_details_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/DetailsBold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="$11,550.00" />
+
+    <ImageView
+        android:id="@+id/img_details"
+        android:layout_width="@dimen/toolbar_icon_size"
+        android:layout_height="@dimen/toolbar_icon_size"
+        android:layout_marginEnd="@dimen/margin_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_right" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.70" />
+
+</android.support.constraint.ConstraintLayout>
