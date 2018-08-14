@@ -16,7 +16,7 @@ You can see the description of the implementation on medium and get the sample a
   <img alt="Android app on Google Play" src="/art/google_play.png" width="196" height="80"/>
 </a>
 
-<a href="https://medium.com">
+<a href="https://medium.com/@bitvale/from-dribbble-template-to-android-motion-74fe03282c88">
   <img alt="Read on Medium" src="/art/medium.png" width="196" height="80" hspace="15" />
 </a>
 
