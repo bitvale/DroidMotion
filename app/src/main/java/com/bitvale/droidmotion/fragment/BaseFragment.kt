@@ -1,10 +1,11 @@
 package com.bitvale.droidmotion.fragment
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.CardView
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
+import androidx.core.view.updatePadding
+import androidx.fragment.app.Fragment
 import com.bitvale.androidmotion.R
 import com.bitvale.droidmotion.common.getStatusBarHeight
 
@@ -26,7 +27,7 @@ open class BaseFragment : Fragment() {
             if (it is CardView) {
                 it.setContentPadding(0, statusBarHeight, 0, 0)
             } else {
-                it.setPadding(0, statusBarHeight, 0, 0)
+                it.updatePadding(top = statusBarHeight)
             }
         }
     }

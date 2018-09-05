@@ -13,7 +13,9 @@ buildscript {
         gradleVersion = '3.3.0-alpha03'
         junitVersion = '4.12'
         kotlinVersion = '1.2.50'
-        supportLibraryVersion = '28.0.0-rc01'
+        androidxVersion = "1.0.0-rc02"
+        materialVersion = "1.0.0-rc01"
+        constraintLayoutVersion = '1.1.2'
     }
 
     repositories {

@@ -38,12 +38,12 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     // Testing dependencies
     testImplementation "junit:junit:$rootProject.junitVersion"
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.kotlinVersion"
-    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
-    implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
+    implementation "androidx.appcompat:appcompat:$rootProject.androidxVersion"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.androidxVersion"
+    implementation "androidx.cardview:cardview:$rootProject.androidxVersion"
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+    implementation "androidx.core:core-ktx:$rootProject.androidxVersion"
 }

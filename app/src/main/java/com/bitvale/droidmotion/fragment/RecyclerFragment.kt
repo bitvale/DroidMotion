@@ -3,19 +3,19 @@ package com.bitvale.droidmotion.fragment
 import android.animation.AnimatorInflater
 import android.animation.ValueAnimator
 import android.os.Bundle
-import android.support.v4.app.FragmentTransaction
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.transition.TransitionInflater
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.doOnLayout
+import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bitvale.androidmotion.R
 import com.bitvale.droidmotion.adapter.RecyclerAdapter
 import com.bitvale.droidmotion.common.*
 import com.bitvale.droidmotion.listener.BottomNavigationViewListener
 import com.bitvale.droidmotion.model.DataProvider
-import com.bitvale.droidmotion.common.TRANSITION_TOOLBAR
 import kotlinx.android.synthetic.main.fragment_recycler.*
 
 
@@ -44,7 +44,7 @@ class RecyclerFragment : BaseFragment(), View.OnClickListener {
         setupViews()
 
         if (savedInstanceState == null) {
-            root.onLayoutAction {
+            root.doOnLayout {
                 toolbar.animate()
                         .translationY(0f)
                         .alpha(1f)

@@ -6,17 +6,18 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.os.Build
-import android.support.annotation.LayoutRes
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.CardView
+import androidx.annotation.LayoutRes
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.view.drawToBitmap
 import com.bitvale.androidmotion.R
 
 /**
@@ -24,15 +25,6 @@ import com.bitvale.androidmotion.R
  */
 fun ViewGroup.inflate(@LayoutRes layoutId: Int, attachToRoot: Boolean = false): View {
     return LayoutInflater.from(context).inflate(layoutId, this, attachToRoot)
-}
-
-fun View.onLayoutAction(action: () -> Unit) {
-    addOnLayoutChangeListener(object : View.OnLayoutChangeListener {
-        override fun onLayoutChange(v: View?, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
-            removeOnLayoutChangeListener(this)
-            action()
-        }
-    })
 }
 
 fun Context.getStatusBarHeight(): Int {
@@ -63,14 +55,11 @@ private inline fun FragmentManager.transact(action: FragmentTransaction.() -> Un
 fun View.copyViewImage(): View {
     val copy = ImageView(context)
 
-    val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
-    val canvas = Canvas(bitmap)
-    draw(canvas)
-
+    val bitmap = drawToBitmap()
     copy.setImageBitmap(bitmap)
 
-    // On preLollipop when we create copy card view's shadow is copied too as content and
-    // we do not need additional card view.
+    // On pre-Lollipop when we create a copy, the card view's shadow is copied too as content and
+    // we do not need an additional card view.
 
     return (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
         CardView(context).apply {

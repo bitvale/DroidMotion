@@ -7,15 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnticipateInterpolator
 import android.view.animation.OvershootInterpolator
+import androidx.core.view.doOnLayout
+import androidx.core.view.updatePadding
 import com.bitvale.androidmotion.R
-import com.bitvale.droidmotion.common.onLayoutAction
-import com.bitvale.droidmotion.common.supportsLollipop
+import com.bitvale.droidmotion.common.*
 import com.bitvale.droidmotion.listener.OnBackPressedListener
 import com.bitvale.droidmotion.model.DataProvider
-import com.bitvale.droidmotion.common.EXTRA_COORDINATES
-import com.bitvale.droidmotion.common.EXTRA_POSITION
-import com.bitvale.droidmotion.common.TRANSITION_CARD
-import com.bitvale.droidmotion.common.TRANSITION_TOOLBAR
 import kotlinx.android.synthetic.main.fragment_details.*
 import kotlinx.android.synthetic.main.item_card.*
 
@@ -28,7 +25,6 @@ class DetailsFragment : BaseFragment(), OnBackPressedListener {
     private lateinit var coordinates: FloatArray
 
     companion object {
-
         const val TAG = "DetailsFragment"
 
         fun newInstance(coordinates: FloatArray, adapterPosition: Int): DetailsFragment {
@@ -102,9 +98,9 @@ class DetailsFragment : BaseFragment(), OnBackPressedListener {
         with(recycler_view) {
             adapter = com.bitvale.droidmotion.adapter.RecyclerAdapter(DataProvider.getDetailsData())
             setHasFixedSize(true)
-            fab_negative.onLayoutAction {
+            fab_negative.doOnLayout {
                 val paddingBottom = (paddingBottom + fab_negative.height * 1.5).toInt()
-                setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom)
+                updatePadding(bottom = paddingBottom)
             }
         }
     }

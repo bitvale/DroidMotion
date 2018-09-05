@@ -1,6 +1,6 @@
 package com.bitvale.droidmotion.model
 
-import android.support.annotation.DrawableRes
+import androidx.annotation.DrawableRes
 import com.bitvale.androidmotion.R
 
 /**
