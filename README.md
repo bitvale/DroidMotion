@@ -13,11 +13,15 @@ This is an Android sample project that shows how to implement a simple android m
 You can see the description of the implementation on medium and get the sample app with similar motions on Google Play.
 
 <a href="https://play.google.com/store/apps/details?id=com.skycodetech.codingquiz">
-  <img alt="Android app on Google Play" src="/art/google_play.png" width="196" height="80"/>
+  <img alt="Android app on Google Play" src="/art/google_play.png" width="172" height="70"/>
 </a>
 
 <a href="https://medium.com/@bitvale/from-dribbble-template-to-android-motion-74fe03282c88">
-  <img alt="Read on Medium" src="/art/medium.png" width="196" height="80" hspace="15" />
+  <img alt="Read on Medium" src="/art/medium.png" width="172" height="70" hspace="8" />
+</a>
+
+<a href="https://dribbble.com/shots/5613604-Mobile-app-motion">
+  <img alt="Design on Dribbble" src="/art/dribbble.png" width="172" height="70"/>
 </a>
 
 #
